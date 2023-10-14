@@ -1,26 +1,48 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+import "./styles.css";
+// import { useReducer, useState } from "react";
+
+// import Counter from "./components/counter/Counter";
+import SearchBox from "./components/search/SearchBox";
+import Users from "./components/user/Users";
+// import Todos from "./components/todos/Todos";
+// import useUserOps from "./hooks/useUserOps";
+
+/* function reducer(state, action) {
+  switch (action.type) {
+    case "increment":
+      return { count: state.count + 1 };
+    case "decrement":
+      return { count: state.count - 1 };
+    default:
+      throw new Error();
+  }
+} */
+
+export default function App() {
+  // const [numberInput] = useState(0);
+  // const [text] = useState("");
+  // const [countState, dispatch] = useReducer(reducer, { count: 0 });
+  // const {
+  //   // users,
+  //   searchedUsers,
+  //   // handleRemove,
+  //   handleSearch,
+  //   handleRestore
+  // } = useUserOps();
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <Counter
+        numberInput={numberInput}
+        countState={countState}
+        dispatch={dispatch}
+      /> */}
+
+      <SearchBox />
+
+      <Users />
+      {/* <Todos /> */}
     </div>
   );
 }
-
-export default App;

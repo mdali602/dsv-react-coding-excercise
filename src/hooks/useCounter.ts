@@ -16,11 +16,14 @@ function reducer(state: State, action: Action) {
       return { count: state.count + Math.ceil(Math.random() * 10) };
     case Actions.INCREMENT_NEAREST_ODD:
       return {
-        count: state.count % 2 === 0 ? state.count + 1 : state.count + 2
+        count: state.count % 2 === 0 ? state.count + 1 : state.count + 2,
       };
     case Actions.DECREMENT_BY_VALUE:
       return {
-        count: action.payload && action.payload <= state.count ? state.count - action.payload : 0
+        count:
+          action.payload && action.payload <= state.count
+            ? state.count - action.payload
+            : 0,
       };
     case Actions.RESET:
       return { count: 0 };
@@ -42,6 +45,6 @@ export default function useCounter() {
     numberInput,
     countState,
     dispatch,
-    handleInputChange
+    handleInputChange,
   };
 }

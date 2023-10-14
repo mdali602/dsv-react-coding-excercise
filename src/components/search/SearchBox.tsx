@@ -3,7 +3,6 @@ import Box from "@mui/material/Box";
 import List from "@mui/material/List";
 import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
-// import useUserOps from "../../hooks/useUserOps";
 import useSearchOps from "../../hooks/useSearchOps";
 import Item from "./Item";
 
